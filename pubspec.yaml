@@ -1,0 +1,52 @@
+name: tgs1_progmob
+description: "A new Flutter project."
+publish_to: 'none'
+version: 0.1.0
+
+environment:
+  sdk: '>=3.3.2 <4.0.0'
+
+dependencies:
+  dio: ^5.4.3+1
+  flutter:
+    sdk: flutter
+  get_storage: ^2.1.1
+  google_fonts: ^6.2.1
+
+dev_dependencies:
+  flutter_lints: ^3.0.0
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/images/logo.png
+    - assets/images/right.png
+    - assets/images/left.png
+    - assets/images/user.png
+    - assets/images/google.png
+    - assets/images/ilustrasi.png
+    - assets/images/saving.png
+    - assets/images/emaillogo.png
+    - assets/images/padlock.png
+    - assets/images/call.png
+    - assets/images/view.png
+    - assets/images/hide.png
+    - assets/images/accept.png
+    - assets/images/cross.png
+    - assets/images/userBlack.png
+    - assets/images/hamburger.png
+    - assets/images/pengguna.png
+    - assets/images/notifikasi.png
+    - assets/images/kartu.png
+    - assets/images/kalender.png
+    - assets/images/home.png
+    - assets/images/info.png
+    - assets/images/edit.png
+    - assets/images/trashbin.png
+    - assets/images/refresh.png
+    - assets/images/nofilluser.png
+    - assets/images/diagram_lingkaran.jpeg
+    - assets/images/userabu.png
+    - assets/images/idcard.png
