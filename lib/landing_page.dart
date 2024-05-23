@@ -1,15 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:tgs1_progmob/main.dart';
-import 'package:tgs1_progmob/page2.dart';
-import 'package:tgs1_progmob/page3.dart';
+import 'package:tgs1_progmob/register_page.dart';
+import 'package:tgs1_progmob/login_page.dart';
 import 'package:tgs1_progmob/typo.dart';
 
 void main() {
-  runApp(const Page1());
+  runApp(const LandingPage());
 }
 
-class Page1 extends StatelessWidget {
-  const Page1({Key? key}) : super(key: key);
+class LandingPage extends StatelessWidget {
+  const LandingPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -50,7 +49,7 @@ class LoginRegister extends StatelessWidget {
                 onPressed: () {
                   Navigator.pushReplacement(
                     context,
-                    MaterialPageRoute(builder: (context) => Page2()),
+                    MaterialPageRoute(builder: (context) => RegisterPage()),
                   );
                 },
                 style: ElevatedButton.styleFrom(
@@ -117,7 +116,7 @@ class LoginRegister extends StatelessWidget {
                       onTap: () {
                         Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) => Page3()),
+                          MaterialPageRoute(builder: (context) => LoginPage()),
                         );
                       },
                       child: Text('Masuk',
@@ -131,13 +130,13 @@ class LoginRegister extends StatelessWidget {
           Positioned(
             top: 0,
             left: 0,
-            child: GestureDetector(
-              onTap: () {
-                Navigator.pushNamed(context, '/');
-              },
-              child: Padding(
-                padding: EdgeInsets.only(left: 20.0, top: 50.0),
-                child: Text('Kembali', style: teksKembaliLanjut),
+            child: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: IconButton(
+                icon: Icon(Icons.arrow_back),
+                onPressed: () {
+                  Navigator.pushNamed(context, '/');
+                },
               ),
             ),
           ),

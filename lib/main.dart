@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:tgs1_progmob/page1.dart';
-import 'package:tgs1_progmob/page2.dart';
-import 'package:tgs1_progmob/page3.dart';
-import 'package:tgs1_progmob/page4.dart';
-import 'package:tgs1_progmob/page5.dart';
+import 'package:tgs1_progmob/landing_page.dart';
+import 'package:tgs1_progmob/register_page.dart';
+import 'package:tgs1_progmob/login_page.dart';
+import 'package:tgs1_progmob/home_page.dart';
+import 'package:tgs1_progmob/add_anggota.dart';
 import 'package:tgs1_progmob/typo.dart';
 
 void main() {
@@ -19,11 +19,11 @@ class MainApp extends StatelessWidget {
       initialRoute: '/', // Mengatur halaman awal (bisa juga menggunakan home)
       routes: {
         '/': (context) => HomeScreen(), // Halaman awal
-        '/utama': (context) => Page1(),
-        '/register': (context) => Page2(),
-        '/login': (context) => Page3(),
-        '/home': (context) => Page4(),
-        '/tambahanggota': (context) => Page5(),
+        '/utama': (context) => LandingPage(),
+        '/register': (context) => RegisterPage(),
+        '/login': (context) => LoginPage(),
+        '/home': (context) => HomePage(),
+        '/tambahanggota': (context) => AddAnggota(onUserAdded: (UserModel ) {  },),
       },
     );
   }

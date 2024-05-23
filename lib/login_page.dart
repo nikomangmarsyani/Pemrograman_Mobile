@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:tgs1_progmob/page1.dart';
-import 'package:tgs1_progmob/main.dart';
-import 'package:tgs1_progmob/page2.dart';
-import 'package:tgs1_progmob/page4.dart';
+import 'package:tgs1_progmob/register_page.dart';
+import 'package:tgs1_progmob/home_page.dart';
 import 'package:tgs1_progmob/typo.dart';
 import 'package:dio/dio.dart';
 import 'package:get_storage/get_storage.dart';
@@ -11,11 +9,11 @@ GetStorage _storage = GetStorage();
 
 void main() async {
   await GetStorage.init();
-  runApp(const Page3());
+  runApp(const LoginPage());
 }
 
-class Page3 extends StatelessWidget {
-  const Page3({Key? key}) : super(key: key);
+class LoginPage extends StatelessWidget {
+  const LoginPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -252,7 +250,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                 Navigator.pushReplacement(
                                   context,
                                   MaterialPageRoute(
-                                      builder: (context) => Page4()),
+                                      builder: (context) => HomePage()),
                                 );
                               });
                             } else {
@@ -331,7 +329,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                 Navigator.pushReplacement(
                                   context,
                                   MaterialPageRoute(
-                                      builder: (context) => Page2()),
+                                      builder: (context) => RegisterPage()),
                                 );
                               },
                               child: Text('Buat Akun',
@@ -347,13 +345,13 @@ class _HomeScreenState extends State<HomeScreen> {
                 Positioned(
                   top: 0,
                   left: 0,
-                  child: GestureDetector(
-                    onTap: () {
-                      Navigator.pushNamed(context, '/utama');
-                    },
-                    child: Padding(
-                      padding: EdgeInsets.only(left: 20.0, top: 50.0),
-                      child: Text('Kembali', style: teksKembaliLanjut),
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: IconButton(
+                      icon: Icon(Icons.arrow_back),
+                      onPressed: () {
+                        Navigator.pushNamed(context, '/utama');
+                      },
                     ),
                   ),
                 ),
