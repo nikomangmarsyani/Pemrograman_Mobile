@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:tgs1_progmob/anggota_details.dart';
 import 'package:tgs1_progmob/landing_page.dart';
 import 'package:tgs1_progmob/add_anggota.dart';
+import 'package:tgs1_progmob/tabungan/tabungan_list.dart';
+import 'package:tgs1_progmob/tranx/jenis_tranx.dart';
 import 'package:tgs1_progmob/typo.dart';
 import 'package:dio/dio.dart';
 import 'package:get_storage/get_storage.dart';
@@ -308,26 +310,36 @@ class Homepage extends StatelessWidget {
               ),
             ),
             GestureDetector(
-              onTap: () {},
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const Tranx())
+                );
+              },
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Image.asset('assets/images/kalender.png',
                       width: 21, height: 21),
                   SizedBox(height: 4),
-                  Text('Plan', style: labelNavbar),
+                  Text('Transaksi', style: labelNavbar),
                 ],
               ),
             ),
             GestureDetector(
-              onTap: () {},
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: ((context) => const ListTabungan())
+                ));
+              },
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Image.asset('assets/images/notifikasi.png',
+                  Image.asset('assets/images/saving.png',
                       width: 21, height: 21),
                   SizedBox(height: 4),
-                  Text('Notifikasi', style: labelNavbar),
+                  Text('Tabungan', style: labelNavbar),
                 ],
               ),
             ),
